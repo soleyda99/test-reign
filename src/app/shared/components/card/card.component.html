@@ -1,0 +1,29 @@
+<div class="Rectangle">
+  <div class="card__content" (click)="openWindow(story_url)">
+    <div>
+      <img
+        src="assets/img/iconmonstr-time-2.svg"
+        class="iconmonstr-time-2 mr"
+      />
+      <span
+        class="-hours-ago-by-autho"
+        style="font-family: Arial, Helvetica, sans-serif"
+        >{{ time | date: "HH:mm" }} hours ago {{ author }}</span
+      >
+    </div>
+    <div class="Yes-Angular-is-taking">
+      <div class="mr">
+        <strong>
+          {{ text }}
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div class="card__content" style="align-items: flex-end">
+    <img
+      src="{{ src }}"
+      class="iconmonstr-favorite-3 cursor"
+      (click)="isOnHeart(id)"
+    />
+  </div>
+</div>

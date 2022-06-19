@@ -1,0 +1,34 @@
+<app-buttons [select]="select" [page]="page"></app-buttons>
+
+<select
+  id="frameworks"
+  class="cards__button"
+  [(ngModel)]="select"
+  (change)="frameworks()"
+>
+  <option [value]="item" *ngFor="let item of lista">{{ item }}</option>
+</select>
+
+<li class="cards__item">
+  <div *ngFor="let dato of data.hits">
+    <ng-container
+      *ngIf="
+        dato.created_at && dato.story_title && dato.author && dato.story_url
+      "
+    >
+      <app-card
+        [time]="dato.created_at"
+        [text]="dato.story_title"
+        [author]="dato.author"
+        [story_url]="dato.story_url"
+        [id]="dato.id"
+        [src]="dato.src"
+      ></app-card>
+    </ng-container>
+  </div>
+</li>
+<app-pagination
+  [pageNum]="page"
+  (pageEnvio)="sendPage($event)"
+  [data]="data"
+></app-pagination>

@@ -1,0 +1,78 @@
+@media only screen and (min-width: 801px) {
+  .Rectangle {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 0 0 0 26px;
+    opacity: 0.8;
+    border: solid 1px #979797;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    width: 550px;
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Rectangle {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 0 0 0 26px;
+    opacity: 0.8;
+    border: solid 1px #979797;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.-hours-ago-by-autho {
+  font-size: 11px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #767676;
+}
+
+.Yes-Angular-is-taking {
+  flex: 1 1 auto;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: 0.25px;
+  color: #6b6b6b;
+  margin-top: 8px;
+}
+
+.mr {
+  margin-right: 10px;
+}
+
+.cursor {
+  width: fit-content;
+}
+
+.Rectangle:hover {
+  opacity: 0.5;
+}

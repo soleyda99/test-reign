@@ -1,0 +1,13 @@
+<div class="pagination-item">
+  <div class="pagination">
+    <a (click)="prevPage()">&lsaquo;</a>
+    <ng-container *ngFor="let page of pagination; let i = index">
+      <a
+        (click)="move(page); selectItem = page"
+        [ngClass]="{ active: selectItem === i + 1 }"
+        >{{ page }}</a
+      >
+    </ng-container>
+    <a (click)="nextPage()">&rsaquo;</a>
+  </div>
+</div>

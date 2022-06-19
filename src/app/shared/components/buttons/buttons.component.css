@@ -1,0 +1,60 @@
+.button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  color: #606060;
+  background-color: white;
+  width: 98px;
+  height: 31px;
+  padding: 3px 0px 0 2px;
+  border-radius: 2px;
+  border: solid 1px #d6d6d6;
+  font-family: Roboto;
+}
+
+.buttonBlue {
+  width: 98px;
+  height: 31px;
+  padding: 3px 0px 0 2px;
+  border-radius: 2px;
+  border: solid 1px #1797ff;
+  background-color: white;
+}
+
+.All {
+  width: 65px;
+  height: 28px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1797ff;
+}
+
+@media only screen and (min-width: 501px) {
+  .cards__button {
+    display: flex;
+    padding-left: 150px;
+    margin-top: 38px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .cards__button {
+    display: flex;
+    padding-left: 150px;
+    margin-top: 38px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

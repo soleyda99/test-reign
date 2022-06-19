@@ -1,0 +1,17 @@
+<div class="cards__button">
+  <button
+    class="button"
+    [routerLinkActive]="['buttonBlue']"
+    routerLink="/productos/all"
+  >
+    <span [routerLinkActive]="['All']"> All </span>
+  </button>
+  <button
+    class="button"
+    [routerLinkActive]="['buttonBlue']"
+    routerLink="/productos/my-faves"
+    (click)="saveFilter()"
+  >
+    <span [routerLinkActive]="['All']"> My faves </span>
+  </button>
+</div>

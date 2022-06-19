@@ -1,0 +1,13 @@
+<app-buttons></app-buttons>
+<li class="cards__item">
+  <div *ngFor="let post of postFav$ | async">
+    <app-card
+      [time]="post.created_at"
+      [text]="post.story_title"
+      [author]="post.author"
+      [story_url]="post.story_url"
+      [src]="'assets/img/iconmonstr-favorite-3.svg'"
+      [id]="post.id"
+    ></app-card>
+  </div>
+</li>
