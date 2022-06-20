@@ -33,18 +33,18 @@ export class AllComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.get(this.select, 1);
-  }
-
-  get(query: string, page: number) {
     if (this._localStorage.getFilter() !== null) {
       this.select = this._localStorage.getFilter()[0].query;
       this.page = this._localStorage.getFilter()[0].page;
-      this._localStorage.borrarFilter();
+      this.get(this.select, this.page);
     } else {
-      this.select = query;
-      this.page = page;
+      this.get(this.select, 1);
     }
+  }
+
+  get(query: string, page: number) {
+    this.select = query;
+    this.page = page;
     this._servicesService
       .getData(this.select, this.page)
       .subscribe((response: any) => {

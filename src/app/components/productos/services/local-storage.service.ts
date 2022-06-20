@@ -20,16 +20,12 @@ export class LocalStorageService {
   }
   addFilter(filter: Filter): void {
     try {
-      const currentsFav = this.getFilter();
-      localStorage.setItem(MY_FILTER, JSON.stringify([...currentsFav, filter]));
-      this.filterSubject.next([...currentsFav, filter]);
+      localStorage.setItem(MY_FILTER, JSON.stringify([filter]));
     } catch (error) {
       console.log('Error saving localStorage', error);
     }
   }
-  borrarFilter() {
-    localStorage.removeItem(MY_FILTER);
-  }
+
   getFilter() {
     try {
       const filterFav = JSON.parse(`${localStorage.getItem(MY_FILTER)}`);

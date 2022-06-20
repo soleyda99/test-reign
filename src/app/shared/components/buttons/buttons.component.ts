@@ -19,7 +19,6 @@ export class ButtonsComponent implements OnInit {
       query: this.select,
       page: this.page,
     };
-    this._localStorage.borrarFilter();
     this._localStorage.initialStorageFilter(body);
   }
 }
