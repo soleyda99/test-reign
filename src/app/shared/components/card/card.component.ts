@@ -18,7 +18,13 @@ export class CardComponent implements OnInit {
 
   constructor(private _localStorage: LocalStorageService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.src == 'assets/img/iconmonstr-favorite-2.svg') {
+      this.flag = true;
+    } else {
+      this.flag = false;
+    }
+  }
 
   isOnHeart(id: number) {
     this.flag = !this.flag;
