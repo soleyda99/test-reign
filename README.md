@@ -8,3 +8,4 @@ Open http://localhost:4200 to view it in the browser.
 
 The page will reload if you make edits.
 
+https://test-reign-angular.netlify.app/productos/all
